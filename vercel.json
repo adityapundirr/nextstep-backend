@@ -1,0 +1,26 @@
+{
+    "functions": {
+        "api/generateMindmap.js": {
+            "runtime": "nodejs20.x"
+        }
+    },
+    "headers": [
+        {
+            "source": "/api/generateMindmap",
+            "headers": [
+                { 
+                    "key": "Access-Control-Allow-Origin", 
+                    "value": "https://nextstep-guide.netlify.app" 
+                },
+                { 
+                    "key": "Access-Control-Allow-Methods", 
+                    "value": "POST, OPTIONS" 
+                },
+                { 
+                    "key": "Access-Control-Allow-Headers", 
+                    "value": "Content-Type" 
+                }
+            ]
+        }
+    ]
+}
