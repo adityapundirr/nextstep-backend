@@ -1,20 +1,8 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/generateMindmap.js",
-      "use": "@vercel/node@2.19.1"
+  "functions": {
+    "api/generateMindmap.js": {
+      "runtime": "nodejs20.x"
     }
-  ],
-  "routes": [
-    {
-      "src": "/api/generateMindmap",
-      "dest": "/api/generateMindmap.js",
-      "headers": {
-        "Access-Control-Allow-Origin": "https://nextstep-guide.netlify.app",
-        "Access-Control-Allow-Methods": "POST, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type"
-      }
-    }
-  ]
+  }
 }
