@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "functions": {
-    "api/generateMindmap.js": {
-      "runtime": "nodejs20.x"
+  "builds": [
+    {
+      "src": "api/generateMindmap.js",
+      "use": "@vercel/node@2.17.0"
     }
-  }
+  ],
+  "routes": [
+    {
+      "src": "/api/generateMindmap",
+      "dest": "/api/generateMindmap.js"
+    }
+  ]
 }
