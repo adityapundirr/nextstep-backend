@@ -1,26 +1,20 @@
 {
-    "functions": {
-        "api/generateMindmap.js": {
-            "runtime": "nodejs20.x"
-        }
-    },
-    "headers": [
-        {
-            "source": "/api/generateMindmap",
-            "headers": [
-                { 
-                    "key": "Access-Control-Allow-Origin", 
-                    "value": "https://nextstep-guide.netlify.app" 
-                },
-                { 
-                    "key": "Access-Control-Allow-Methods", 
-                    "value": "POST, OPTIONS" 
-                },
-                { 
-                    "key": "Access-Control-Allow-Headers", 
-                    "value": "Content-Type" 
-                }
-            ]
-        }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/generateMindmap.js",
+      "use": "@vercel/node@2.19.1"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/generateMindmap",
+      "dest": "/api/generateMindmap.js",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "https://nextstep-guide.netlify.app" },
+        { "key": "Access-Control-Allow-Methods", "value": "POST, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type" }
+      ]
+    }
+  ]
 }
